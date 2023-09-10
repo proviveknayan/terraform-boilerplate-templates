@@ -1,9 +1,12 @@
-# Terraform Boilerplate Templates
+# Terraform Boilerplate Templates / GitHub
 
 ![Static Badge](https://img.shields.io/badge/Terraform-1.5.0-blue)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
-Official documentation 👉 https://developer.hashicorp.com/terraform
+Official documentation 👉 https://registry.terraform.io/providers/integrations/github/latest/docs
+
+#### Minimum permission required for GitHub PAT (Personal Access Token) are:
+`"repo"` `"read:repo_hook"` `"read:org"` `"read:discussion"` `"delete_repo"`
 
 ## Build
 ```
