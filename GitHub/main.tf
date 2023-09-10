@@ -28,7 +28,7 @@ resource "github_repository" "repo" {
   gitignore_template = "VisualStudio"
 }
 
-# set 'main' as default branch
+# create 'main' and 'stage' branches / set 'main' as default branch
 
 resource "github_branch_default" "main" {
   repository = github_repository.repo.name
@@ -45,10 +45,10 @@ resource "github_branch" "stage" {
 resource "github_branch_protection" "default" {
   repository_id                   = github_repository.repo.id
   pattern                         = github_branch_default.main.branch
-  require_conversation_resolution = true
-  enforce_admins                  = true
-
+  require_conversation_resolution = true # all conversations on code must be resolved before a pull request can be merged
+  enforce_admins                  = true # enforce status checks for repository administrators
+  
   required_pull_request_reviews {
-    required_approving_review_count = 1
+    required_approving_review_count = 1 # PR must have at least 1 approving review before it can be merged
   }
 }
