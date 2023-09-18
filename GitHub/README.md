@@ -5,7 +5,7 @@
 
 Official documentation 👉 https://registry.terraform.io/providers/integrations/github/latest/docs
 
-#### Minimum permission required for GitHub PAT (Personal Access Token) are:
+#### Minimum permission required for GitHub PAT are:
 `"repo"` `"read:repo_hook"` `"read:org"` `"read:discussion"` `"delete_repo"`
 
 ## Build
