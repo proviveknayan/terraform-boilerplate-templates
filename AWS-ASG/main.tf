@@ -81,7 +81,7 @@ resource "aws_security_group" "allow_http" {
   security_groups = [ aws_security_group.allow_http.id ]
   associate_public_ip_address = true
   ## script to execute at boot
-  ## install nginx. put instance’s local IP in index.html.
+  ## install and start nginx
   user_data = <<USER_DATA
   #!/bin/bash
   yum update
